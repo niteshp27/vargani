@@ -1,4 +1,21 @@
------------Check if git is setup and initialized
+
+<<<<<-----------Tell Git who you are
+First, you need to tell Git who you are:
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+<<<<<-----------Clone a repository if required
+git clone git@github.com:<your github account>/repo-name.git
+
+
+<<<<<-----------
+
+<<<<<-----------
+
+<<<<<-----------
+
+<<<<<-----------Check if git is setup and initialized
 PS E:\nitesh\githubrepo\vargani> git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
@@ -6,7 +23,7 @@ Your branch is ahead of 'origin/master' by 1 commit.
 
 nothing to commit, working tree clean
 
------------check branches and * poinst to current branch
+<<<<<-----------check branches and * points to current branch
 PS E:\nitesh\githubrepo\vargani> git branch -a
 * master
   remotes/origin/HEAD -> origin/master
@@ -14,10 +31,13 @@ PS E:\nitesh\githubrepo\vargani> git branch -a
   remotes/origin/react-components
 
 
------------Create branch and stay in same branch master
+#######################
+A:- seperate cmd for  branch creation and switch to created branch
+
+<<<<<-----------Create branch and stay in same branch master
 git branch react-components
 
------------change branch to react-components
+<<<<<-----------change branch to react-components
 PS E:\nitesh\githubrepo\vargani> git checkout react-components
 Switched to a new branch 'react-components'
 Branch react-components set up to track remote branch react-components from origin.
@@ -25,10 +45,129 @@ PS E:\nitesh\githubrepo\vargani> git branch
   master
 * react-components
 
------------
+
+#######################
+B:- seperate cmd for  branch creation and switch to created branch. Combine the two commands above and thereby create and checkout to a new branch in a single command by postfixing -b to the checkout command:
+git checkout -b react-components
+
+
+<<<<<-----------
 PS E:\nitesh\githubrepo\vargani> git branch -a
   master
 * react-components
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
   remotes/origin/react-components
+
+<<<<<-----------Add files to git.
+Git has a staging area, for files that you want to commit. Staging a file in Git’s terminology means adding it to the staging area, in preparation for a commit.
+
+--single file
+E.G.- "git add -a file-name.ext"
+
+--all files
+E.G.- "git add ."
+
+<<<<<-----------commit files after adding them.
+for adding refer 
+
+"git add -a cmd above".
+
+PS E:\nitesh\githubrepo\vargani> git commit -m "added git commands and node command to run teh app"
+[react-components 412dc88] added git commands and node command to run teh app
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+ create mode 100644 cmds.txt
+
+<<<<<-----------commits via editor
+
+
+<<<<<-----------exit commit editor press "Esc" button and type ":wq" press "enter" to save and exit and press "Esc" button and type ":q!" "enter" button to exit
+
+
+#######################
+<<<<<-----------display all commits
+PS E:\nitesh\githubrepo\vargani> git log
+commit 412dc8811d2c09f1cfefa997f3cab6ecb94eff88 (HEAD -> react-components)
+Author: Nitesh <niteshp27@gmail.com>
+Date:   Fri Oct 6 13:33:59 2017 +0530
+
+    added git commands and node command to run teh app
+
+commit 243e6271c437bdff7512bc39dcb00d9d8e3b0848 (origin/react-components, origin/master, origin/HEAD)
+Author: Nitesh <niteshp27@gmail.com>
+Date:   Thu Oct 5 18:23:27 2017 +0530
+
+    initial setup webpack, react, babel, npm,scripts, git ignore
+
+commit 98dd2f769ffe2a2cf79b012839e615ee4f4b4f80
+Author: Nitesh <niteshp27@gmail.com>
+Date:   Thu Oct 5 18:16:35 2017 +0530
+
+    Initial commit
+
+<<<<<-----------show status of a particaular commit, note commit hash is taken after output from git log entry
+PS E:\nitesh\githubrepo\vargani> git show 412dc88
+commit 412dc8811d2c09f1cfefa997f3cab6ecb94eff88 (HEAD -> react-components)
+Author: Nitesh <niteshp27@gmail.com>
+Date:   Fri Oct 6 13:33:59 2017 +0530
+
+    added git commands and node command to run teh app
+
+diff --git a/cmds.txt b/cmds.txt
+new file mode 100644
+index 0000000..73d3369
+--- /dev/null
++++ b/cmds.txt
+@@ -0,0 +1,34 @@
++-----------Check if git is setup and initialized
++PS E:\nitesh\githubrepo\vargani> git status
++On branch master
++Your branch is ahead of 'origin/master' by 1 commit.
++  (use "git push" to publish your local commits)
++
++nothing to commit, working tree clean
++
++-----------check branches and * poinst to current branch
+:
+
+<<<<<-----------should type :q to exit from git show.
+
+#######################
+<<<<<-----------Push changes to branch react-components. 
+
+E.G.- git push origin repo-name
+
+
+PS E:\nitesh\githubrepo\vargani> git push origin react-components
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 873 bytes | 873.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/niteshp27/vargani.git
+   243e627..412dc88  react-components -> react-components
+
+
+<<<<<-----------To merge react-components with master, run the following (after first making sure the master branch is active). 
+Then later delete react-components branch if needed.
+
+
+
+
+#######################
+Extra cmd if required
+
+<<<<<-----------The branches we've just created are based on the latest commit of the current active branch—which in our case is master. 
+If you want to create a branch (say old_commit_branch) based on a certain commit—such as cafb55d—you can run the following command:
+E.G.- git checkout -b old_commit_branch commit-id
+
+
+<<<<<-----------Go to current branch and then rename it-
+E.G.- git branch -m renamed_branch
+
+<<<<<-----------Delete a branch
+E.G.- git branch -d new_test_branch  --Always use "-d" and not "-D" as "-d" will not delete branch if commits are not pushed and we will not loose work.
+
+
+

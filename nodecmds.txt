@@ -1,0 +1,59 @@
+-----------
+C:\Users\NiteshPatare
+λ e:
+
+-----------
+E:\cmder_mini\config\profile.d
+λ cd E:\nitesh\githubrepo\vargani
+
+-----------
+E:\nitesh\githubrepo\vargani (react-components) (vargani@1.0.0)
+λ npm start
+
+> vargani@1.0.0 start E:\nitesh\githubrepo\vargani
+> npm run build
+
+
+> vargani@1.0.0 build E:\nitesh\githubrepo\vargani
+> webpack -d && npm run copy && webpack-dev-server --content-base src/ --inline --hot
+
+Hash: d7ce89bd2e4ab75d9f99
+Version: webpack 3.6.0
+Time: 831ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  3.12 kB       0  [emitted]  main
+   [0] ./src/app/index.js 45 bytes {0} [built]
+
+> vargani@1.0.0 copy E:\nitesh\githubrepo\vargani
+> cpx src/index.html dist
+
+Project is running at http://localhost:8080/
+webpack output is served from /app/
+Content not from webpack is served from E:\nitesh\githubrepo\vargani\src
+Hash: 372f13b6d1d46343f9f0
+Version: webpack 3.6.0
+Time: 992ms
+    Asset    Size  Chunks                    Chunk Names
+bundle.js  355 kB       0  [emitted]  [big]  main
+  [19] (webpack)/hot/log.js 1.04 kB {0} [built]
+  [36] (webpack)/hot/emitter.js 77 bytes {0} [built]
+  [37] multi (webpack)-dev-server/client?http://localhost:8080 webpack/hot/dev-server ./src/app/index.js 52 bytes {0} [built]
+  [38] (webpack)-dev-server/client?http://localhost:8080 7.23 kB {0} [built]
+  [39] ./node_modules/url/url.js 23.3 kB {0} [built]
+  [41] ./node_modules/url/util.js 314 bytes {0} [built]
+  [45] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+  [47] ./node_modules/loglevel/lib/loglevel.js 7.74 kB {0} [built]
+  [48] (webpack)-dev-server/client/socket.js 1.04 kB {0} [built]
+  [80] (webpack)-dev-server/client/overlay.js 3.73 kB {0} [built]
+  [85] (webpack)/hot nonrecursive ^\.\/log$ 170 bytes {0} [built]
+  [86] ./node_modules/events/events.js 8.33 kB {0} [built]
+  [87] (webpack)/hot/dev-server.js 1.61 kB {0} [built]
+  [88] (webpack)/hot/log-apply-result.js 1.31 kB {0} [built]
+  [89] ./src/app/index.js 45 bytes {0} [built]
+    + 75 hidden modules
+webpack: Compiled successfully.
+
+
+
+-----------
+Open http://localhost:8080/ in browser
