@@ -1,0 +1,34 @@
+-----------Check if git is setup and initialized
+PS E:\nitesh\githubrepo\vargani> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+-----------check branches and * poinst to current branch
+PS E:\nitesh\githubrepo\vargani> git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/react-components
+
+
+-----------Create branch and stay in same branch master
+git branch react-components
+
+-----------change branch to react-components
+PS E:\nitesh\githubrepo\vargani> git checkout react-components
+Switched to a new branch 'react-components'
+Branch react-components set up to track remote branch react-components from origin.
+PS E:\nitesh\githubrepo\vargani> git branch
+  master
+* react-components
+
+-----------
+PS E:\nitesh\githubrepo\vargani> git branch -a
+  master
+* react-components
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/react-components
