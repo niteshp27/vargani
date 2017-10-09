@@ -214,9 +214,13 @@ PS E:\nitesh\githubrepo\vargani> git branch
 
 <<<<<<<<<<<<<<<<<<<<<<<<----------
 PS E:\nitesh\githubrepo\vargani> git add .
+
+
 PS E:\nitesh\githubrepo\vargani> git commit -m "updated git cmd"
 [master f1e603d] updated git cmd
  1 file changed, 2 insertions(+), 2 deletions(-)
+
+
  
 <<<<<<<<<<<<<<<<<<<<<<<<----------
 PS E:\nitesh\githubrepo\vargani> git status
