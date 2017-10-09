@@ -181,7 +181,8 @@ E.G.- git branch -d new_test_branch  --Always use "-d" and not "-D" as "-d" will
 
 
 
-_____________________________________________________________________________________________________________________PS E:\nitesh\githubrepo\vargani> git push origin react-components
+_____________________________________________________________________________________________________________________
+PS E:\nitesh\githubrepo\vargani> git push origin react-components
 Counting objects: 4, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (4/4), done.
