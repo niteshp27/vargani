@@ -182,7 +182,9 @@ E.G.- git branch -d new_test_branch  --Always use "-d" and not "-D" as "-d" will
 
 
 _____________________________________________________________________________________________________________________
-PS E:\nitesh\githubrepo\vargani> git push origin react-components
+
+
+<<<<<<<<<<PS E:\nitesh\githubrepo\vargani> git push origin react-components
 Counting objects: 4, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (4/4), done.
@@ -197,55 +199,95 @@ Your branch is up-to-date with 'origin/react-components'.
 nothing to commit, working tree clean
 
 
-PS E:\nitesh\githubrepo\vargani> git status
-On branch react-components
-Your branch is ahead of 'origin/react-components' by 1 commit.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-PS E:\nitesh\githubrepo\vargani> git push origin react-components
-Counting objects: 3, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/niteshp27/vargani.git
-   48f2926..5be035a  react-components -> react-components
-
-PS E:\nitesh\githubrepo\vargani> git checkout master
-Switched to branch 'master'
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-  
-
-  
-  PS E:\nitesh\githubrepo\vargani> git status
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-
-
-
-
-//merge with remote and local branch
+<<<<<<<<<<//merge with remote and local branch
 PS E:\nitesh\githubrepo\vargani> git merge react-components
-Already up-to-date.
 
 
-/////
+<<<<<<<<<<
 PS E:\nitesh\githubrepo\vargani> git checkout master
 Switched to branch 'master'
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
+  
 
-/////
 PS E:\nitesh\githubrepo\vargani> git branch
 * master
   react-components
 
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+
+
+Pushing to a remote
+Use git push to push commits made on your local branch to a remote repository.
+The git push command takes two arguments:
+A remote name, for example, origin
+A branch name, for example, master
+For example:
+
+git push  <REMOTENAME> <BRANCHNAME> 
+As an example, you usually run git push origin master to push your local changes to your online repository.
+
+Renaming branches
+To rename a branch, you'd use the same git push command, but you would add one more argument: the name of the new branch. For example:
+
+git push  <REMOTENAME> <LOCALBRANCHNAME>:<REMOTEBRANCHNAME> 
+This pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to REMOTEBRANCHNAME.
+  
+  
+PS E:\nitesh\githubrepo\vargani> git push
+Counting objects: 13, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.76 KiB | 1.76 MiB/s, done.
+Total 13 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To https://github.com/niteshp27/vargani.git
+   59dc1f9..a2fa581  master -> master
+
+   
+<<<<<<<<<<<<<<<<<<<<<<<<----------   
+
+By default, and without additional parameters, git push sends all matching branches that have the same names as remote branches.
+To push a single tag, you can issue the same command as pushing a branch:
+git push [remote] [branch] 
+
+To push all your tags, you can type the command:
+git push  <REMOTENAME> --tags   
+   
+  
+   
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+
+
+
+Fetch & Merge
+Merging combines your local changes with changes made by others.
+Typically, you'd merge a remote-tracking branch (i.e., a branch fetched from a remote repository) with your local branch:
+
+git merge remotename/branchname     [remotename: https://github.com/user/repo.git, branchname:master]
+
+# Merges updates made online with your local work
+
+OR   #######################################################
+
+Pull
+git pull is a convenient shortcut for completing both git fetch and git mergein the same command:
+
+Note:- save local workj berofre pull.
+git pull remotename branchname    [remotename: https://github.com/user/repo.git, branchname:master]
+
+# Grabs online updates and merges them with your local work
+Because pull performs a merge on the retrieved changes, you should ensure that your local work is committed before running the pull command. If you run into a merge conflict you cannot resolve, or if you decide to quit the merge, you can use git merge --abort to take the branch back to where it was in before you pulled.
+
+
+
+PS E:\nitesh\githubrepo\vargani> git merge master
+Already up-to-date.
+
+
+  
+  
 /////  
 PS E:\nitesh\githubrepo\vargani> git branch -d react-components 
 
@@ -260,3 +302,8 @@ Merge made by the 'recursive' strategy.
  3 files changed, 237 insertions(+), 1 deletion(-)
  create mode 100644 cmds.txt
  create mode 100644 nodecmds.txt
+ 
+ 
+ _____________new breach and same process again
+ 
+ PS E:\nitesh\githubrepo\vargani> git branch "gitcmd2"
