@@ -245,6 +245,53 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/niteshp27/vargani.git
    a2fa581..07a70f8  master -> master
 
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+
+If want to delte branch, first checkout i.e. move head to root branch master then below cmds.
+
+PS E:\nitesh\githubrepo\vargani> git checkout master
+Switched to branch 'master'
+
+PS E:\nitesh\githubrepo\vargani> git branch -d "react-components"
+Deleted branch react-components (was 1fb1c4c).
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+
+However, by default, git fetch does not remove remote branches that no longer have a counterpart branch on the remote. In order to do that, you explicitly need to 
+prune the list of remote branches:
+
+git fetch --prune
+This will automatically get rid of remote branches that no longer exist on the remote. Afterwards, git branch -r will show you an updated list of branches that 
+really exist on the remote
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git branch -a
+* master
+  react-components
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/react-components
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git fetch --prune
+
+Now check the list using any 2 below cmds
+PS E:\nitesh\githubrepo\vargani> git branch -a
+* master
+  react-components
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+ 
+ OR
+
+PS E:\nitesh\githubrepo\vargani> git branch -r
+  origin/HEAD -> origin/master
+  origin/master
+
+
 >>>>>ENDS<<<<<
 
 
