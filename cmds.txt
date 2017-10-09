@@ -199,10 +199,6 @@ Your branch is up-to-date with 'origin/react-components'.
 nothing to commit, working tree clean
 
 
-<<<<<<<<<<//merge with remote and local branch
-PS E:\nitesh\githubrepo\vargani> git merge react-components
-
-
 <<<<<<<<<<
 PS E:\nitesh\githubrepo\vargani> git checkout master
 Switched to branch 'master'
@@ -213,6 +209,39 @@ Your branch is ahead of 'origin/master' by 1 commit.
 PS E:\nitesh\githubrepo\vargani> git branch
 * master
   react-components
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git add .
+PS E:\nitesh\githubrepo\vargani> git commit -m "updated git cmd"
+[master f1e603d] updated git cmd
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ 
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git pull
+Already up-to-date.
+
+<<<<<<<<<<<<<<<<<<<<<<<<----------
+PS E:\nitesh\githubrepo\vargani> git push https://github.com/niteshp27/vargani.git master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.43 KiB | 1.43 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/niteshp27/vargani.git
+   a2fa581..07a70f8  master -> master
+
+
 
 
 <<<<<<<<<<<<<<<<<<<<<<<<----------
