@@ -235,7 +235,7 @@ PS E:\nitesh\githubrepo\vargani> git pull
 Already up-to-date.
 
 <<<<<<<<<<<<<<<<<<<<<<<<----------
-PS E:\nitesh\githubrepo\vargani> git push https://github.com/niteshp27/vargani.git master
+PS E:\nitesh\githubrepo\vargani> git push https://github.com/niteshp27/vargani.git master   [git push origin react-components - also works]
 Counting objects: 3, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (3/3), done.
@@ -245,7 +245,7 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/niteshp27/vargani.git
    a2fa581..07a70f8  master -> master
 
-
+>>>>>ENDS<<<<<
 
 
 <<<<<<<<<<<<<<<<<<<<<<<<----------
