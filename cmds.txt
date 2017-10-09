@@ -151,6 +151,8 @@ To https://github.com/niteshp27/vargani.git
 
 <<<<<-----------To merge react-components with master, run the following (after first making sure the master branch is active). 
 Then later delete react-components branch if needed.
+git checkout master
+git merge react-components
 
 
 
