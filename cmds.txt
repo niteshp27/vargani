@@ -274,7 +274,7 @@ OR   #######################################################
 Pull
 git pull is a convenient shortcut for completing both git fetch and git mergein the same command:
 
-Note:- save local workj berofre pull.
+Note:- save local work before pull.
 git pull remotename branchname    [remotename: https://github.com/user/repo.git, branchname:master]
 
 # Grabs online updates and merges them with your local work
@@ -306,4 +306,4 @@ Merge made by the 'recursive' strategy.
  
  _____________new breach and same process again
  
- PS E:\nitesh\githubrepo\vargani> git branch "gitcmd2"
+ PS E:\nitesh\githubrepo\vargani> git branch "gitcmd2"./
