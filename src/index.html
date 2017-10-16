@@ -1,11 +1,31 @@
 <!doctype html>
 <html>
 <head>
-
+        <link href="https://unpkg.com/normalize.css@^4.1.1" rel="stylesheet" />
+        <link href="https://unpkg.com/@blueprintjs/core@^1.11.0/dist/blueprint.css" rel="stylesheet" />
+        <style type="text/css">
+            .container-wrapper{ padding: 0 25px; }
+            .mainWrappper{ padding: 25px;}
+            .header{
+                background-color: #5C7080;
+            }
+            .header .pt-menu{
+                background-color: transparent;
+                color: #fff;
+            }
+            .header .pt-menu li{     display: inline-block; }
+        </style>
 </head>
 <body>
-Hi hello from nitesh.
+    <noscript>
+        Please enable javascript to use this site
+    </noscript>
+<div id="app" class="app-wrapper"></div>
 
+<script src="https://unpkg.com/classnames@^2.2"></script> 
+<script src="https://unpkg.com/dom4@^1.8"></script> 
+<script src="https://unpkg.com/tether@^1.4"></script> 
+<script src="https://unpkg.com/@blueprintjs/core@^1.11.0"></script> 
 <script src="/app/bundle.js"></script>    
 </body>
 </html>
