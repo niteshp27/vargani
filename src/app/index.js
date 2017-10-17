@@ -7,6 +7,7 @@ import { Previewform  } from "./components/Previewform";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
 class App extends React.Component{
+
     render(){
         
         var styleVar = {
@@ -24,18 +25,20 @@ class App extends React.Component{
         return(
             <div>
                 <div>
-                    <Header/>
+                    <Header />
                 </div>
                 <div className="container-wrapper mainWrappper">
                     <div style={styleVar}>
                         <Dataform/>
                     </div>
                     <div style={styleVar}>
-                        <Previewform  formName= "Preview Form" user={user}/>
+                        <Previewform  FormName= "Preview Form" User={user} InitialAge={18} >
+                        Hello Preview!
+                        </Previewform>
                     </div>
                 </div>
                 <div>
-                    <Footer />
+                    <Footer FooterDesc="This is footer text."/>
                 </div>
                            
             </div>

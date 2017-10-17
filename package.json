@@ -4,7 +4,7 @@
   "description": "Donation React Js App",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",   
+    "start": "npm run build",
     "copy": "cpx src/index.html dist",
     "build": "webpack -d && npm run copy && webpack-dev-server --content-base src/ --inline --hot",
     "build:prod": "webpack -p && npm run copy"
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@blueprintjs/core": "^1.30.0",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.0.0"

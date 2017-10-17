@@ -8,6 +8,9 @@ import {
 
 
 export class Header extends React.Component{
+    shouldComponentUpdate(nextProps, nextState) {
+        return false;
+    }
     render(){
         console.log("Indside header.js");
         const menu = (

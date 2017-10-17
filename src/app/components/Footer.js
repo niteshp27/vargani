@@ -1,13 +1,11 @@
 import React from "react";
 
-export class Footer extends React.Component{
-    render(){
+export const Footer = (props) => {
         return(
             <footer>
                 <div className="container-wrapper">
-                    <p>This is footer:- </p>
+                    <p>{props.FooterDesc} </p>
                 </div>
             </footer>
         );
-    }
-}
+};

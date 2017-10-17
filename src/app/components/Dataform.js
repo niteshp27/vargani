@@ -2,6 +2,9 @@ import React from "react";
 import { Button } from "@blueprintjs/core";
 
 export class Dataform extends React.Component{
+    shouldComponentUpdate(nextProps, nextState) {
+        return false;
+    }
     render() {
         return (
             <div className="inputForm">
