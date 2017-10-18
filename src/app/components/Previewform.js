@@ -30,14 +30,25 @@ export class Previewform extends React.Component{
         console.log(this.state);
         return (
             <div className="formData">
+                <p>
+                { this.props.children }
+                </p>
                 <p><b>{this.props.FormName}</b></p>
                 <p>
                     Name: <span>{ this.props.User.name}</span>
+                </p>                    
+                <p>
                     Age: <span>{ this.state.InitialAge}</span>
+                </p>
+                <p> 
                     Staus: <span>{ this.state.Staus}</span>
                 </p>
                 <p>
                 <button onClick={ () => this.onMakeOlder() } > Increase Age </button>
+                </p>
+                <hr/>
+                <p>
+                <button onClick={ () => this.props.OnGreet() } > Greet </button>
                 </p>
                 <div>
                     <ul>
@@ -58,6 +69,12 @@ export class Previewform extends React.Component{
 
 Previewform.PropTypes = {
     FormName: PropTypes.string,
-    User: PropTypes.object
+    User: PropTypes.object,
+    children: PropTypes.element.isRequired
 };
 
+// Specifies the default values for props:
+Previewform.defaultProps = {
+    InitialAge: 18
+};
+  

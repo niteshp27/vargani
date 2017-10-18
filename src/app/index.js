@@ -8,6 +8,25 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 
 class App extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            previewFormName: "Preview Form!!!"
+        };
+    }
+    
+    onChangePreviewFormName(newName){
+        console.log("App??this.state.previewFormName--"+ this.state.previewFormName);
+        console.log("App::newName--"+ newName);
+        
+        this.setState({
+            previewFormName: newName
+        });
+    }
+
+    onGreet(){
+        alert("Hello");
+    }
     render(){
         
         var styleVar = {
@@ -25,20 +44,29 @@ class App extends React.Component{
         return(
             <div>
                 <div>
-                    <Header />
+                    <ErrorBoundary>
+                        <Header />
+                    </ErrorBoundary>
                 </div>
                 <div className="container-wrapper mainWrappper">
                     <div style={styleVar}>
-                        <Dataform/>
+                        <ErrorBoundary>
+                            <Dataform ChangeName= { this.onChangePreviewFormName.bind(this) } />  
+                            {/* this.onChangePreviewFormName.bind(this) does not bind this and causes error */}
+                        </ErrorBoundary>
                     </div>
                     <div style={styleVar}>
-                        <Previewform  FormName= "Preview Form" User={user} InitialAge={18} >
-                        Hello Preview!
-                        </Previewform>
+                        <ErrorBoundary>
+                            <Previewform FormName= {this.state.previewFormName} User={user} OnGreet={this.onGreet} >
+                            Hello Preview!
+                            </Previewform>
+                        </ErrorBoundary>
                     </div>
                 </div>
                 <div>
-                    <Footer FooterDesc="This is footer text."/>
+                    <ErrorBoundary>
+                        <Footer FooterDesc="This is footer text."/>
+                    </ErrorBoundary>
                 </div>
                            
             </div>
