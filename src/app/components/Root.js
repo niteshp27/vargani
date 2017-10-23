@@ -25,8 +25,8 @@ export class Root extends React.Component{
                         <Footer FooterDesc="This is footer text."/>
                     </ErrorBoundary>
                 </div>
-                           
-            </div>
+            </div>               
+            
         );
     }
 }
