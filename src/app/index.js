@@ -1,7 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Root } from "./components/Root";
-import { Dashboard } from "./components/Dashboard";
+import { Home } from "./components/Home";
+import { User } from "./components/User";
+import { NoMatch } from "./components/NoMatch";
 
 class App extends React.Component{
 
@@ -9,10 +12,25 @@ class App extends React.Component{
 
         return(
             
-                <Root>                           
-                    <Dashboard />
+            <Router>
+                <Root>   
+                    <Switch>               
+                        <Route exact path="/" component={Home} >
+                         
+                        </Route>
+                        <Route path="/home" component={Home} >
+                     
+                        </Route>
+                        <Route  path="/user" component={User}>                   
+                           
+                        </Route>
+                        <Route component={NoMatch}> 
+                          
+                        </Route>
+                    </Switch>
                 </Root>
-            
+            </Router>
+                          
         );
     }
 }

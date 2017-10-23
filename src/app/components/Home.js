@@ -1,11 +1,11 @@
 import React from "react";
-import { render } from "react-dom";
+import { render } from 'react-dom';
 import { Footer } from "../components/Footer";
 import { Dataform } from "../components/Dataform";
 import { Previewform  } from "../components/Previewform";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 
-export class Dashboard extends React.Component{
+export class Home extends React.Component{
 
     constructor(props) {
         super(props);
@@ -76,12 +76,15 @@ export class Dashboard extends React.Component{
                         <div>
                             {homeCmp}
                         </div>
-                        <div>
-                        <button text="Un Mount" onClick={ () => this.onHomeMounted() } > UnmOunt </button>
-                        </div>
                     </ErrorBoundary>
                 </div>
-                           
+                <div className="container-wrapper">
+                    <ErrorBoundary>                       
+                        <code className="testCode">
+                            <button text="Un Mount" onClick={ () => this.onHomeMounted() } > UnmOunt </button>
+                        </code>
+                    </ErrorBoundary>
+                </div>     
             </div>
         );
     }
