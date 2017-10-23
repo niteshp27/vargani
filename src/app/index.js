@@ -11,13 +11,14 @@ class App extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            previewFormName: "Preview Form!!!"
+            previewFormName: "Preview Form!!!",
+            homeMounted: true
         };
     }
-    
+
     onChangePreviewFormName(newName){
-        console.log("App??this.state.previewFormName--"+ this.state.previewFormName);
-        console.log("App::newName--"+ newName);
+//        console.log("App??this.state.previewFormName--"+ this.state.previewFormName);
+//        console.log("App::newName--"+ newName);
         
         this.setState({
             previewFormName: newName
@@ -27,9 +28,16 @@ class App extends React.Component{
     onGreet(){
         alert("Hello");
     }
+
+    //compunentunmount simulation
+    onHomeMounted(){
+        this.setState({
+            homeMounted: !this.state.homeMounted
+        });
+    }
     render(){
         
-        var styleVar = {
+        let styleVar = {
             width: '50%',
             display: 'inline-block',
             color: '#666',
@@ -37,10 +45,16 @@ class App extends React.Component{
             WebkitTransition: 'all', // note the capital 'W' here
             msTransition: 'all' // 'ms' is the only lowercase vendor prefix
         };
-        var user = {
+        let user = {
             name: "Nitesh",
             hobbies: [ "Reading", "Sports"]
         }
+
+        let homeCmp = "";
+        if(this.state.homeMounted){
+            homeCmp = ( <Footer FooterDesc="This is second footer text."/> );
+        }
+
         return(
             <div>
                 <div>
@@ -66,6 +80,12 @@ class App extends React.Component{
                 <div>
                     <ErrorBoundary>
                         <Footer FooterDesc="This is footer text."/>
+                        <div>
+                            {homeCmp}
+                        </div>
+                        <div>
+                        <button text="Un Mount" onClick={ () => this.onHomeMounted() } > UnmOunt </button>
+                        </div>
                     </ErrorBoundary>
                 </div>
                            

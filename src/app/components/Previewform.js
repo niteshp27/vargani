@@ -15,6 +15,7 @@ export class Previewform extends React.Component{
             });
             console.log(this.state);
         },5000);
+        console.log('constructor');        
     }
     onMakeOlder(){
         this.setState({
@@ -23,11 +24,46 @@ export class Previewform extends React.Component{
     }
 
 
+    componentWillMount(){
+        console.log('component will mount');
+    }
 
+    componentDidMount(){
+        console.log('component did mount');
+    }
+
+    componentWillReceiveProps(nextProps){
+        console.log('component will receive props', nextProps);
+    }
+
+
+    shouldComponentUpdate(nextProps, nextState){
+        console.log('component shouldComponentUpdate', nextProps, nextState);
+        //we can access nextState state object and its values as e.g.-
+        /*
+        if(nextState.status === 1){
+            return false; //we can override default rendering this way for particular behaviour
+        }
+        */
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState){
+        console.log('component will update', nextProps, nextState);
+    }
+
+
+    componentDidUpdate(nextProps, nextState){
+        console.log('component did update', nextProps, nextState);
+    }
+
+    componentWillUnmount(){
+        console.log('component will Unmount');
+    }
     
     render() {
-        console.log(this.props);
-        console.log(this.state);
+//        console.log(this.props);
+//        console.log(this.state);
         return (
             <div className="formData">
                 <p>

@@ -8,17 +8,18 @@ export class Dataform extends React.Component{
         this.state = {
             previewFormName: props.InitialFormName
         };
+
     }
+
+
+
     
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;  //we are adding data so should be true
-    }
     onChangePreviewFormNameLFunc(){
         this.props.ChangeName(this.state.previewFormName);
-        console.log("Dataform>>--"+ this.state.previewFormName);
+        //console.log("Dataform>>--"+ this.state.previewFormName);
     }
     onChangeHandleLFunc(event){
-        console.log("onChangeHandleLFunc>>--"+ event.target.value);
+        //console.log("onChangeHandleLFunc>>--"+ event.target.value);
         this.setState({
             previewFormName: event.target.value
         });
