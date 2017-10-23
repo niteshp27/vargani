@@ -51,13 +51,13 @@ class App extends React.Component{
                 <div className="container-wrapper mainWrappper">
                     <div style={styleVar}>
                         <ErrorBoundary>
-                            <Dataform ChangeName= { this.onChangePreviewFormName.bind(this) } />  
+                            <Dataform ChangeName= { this.onChangePreviewFormName.bind(this) } InitialFormName= {this.state.previewFormName}/>  
                             {/* this.onChangePreviewFormName.bind(this) does not bind this and causes error */}
                         </ErrorBoundary>
                     </div>
                     <div style={styleVar}>
                         <ErrorBoundary>
-                            <Previewform FormName= {this.state.previewFormName} User={user} OnGreet={this.onGreet} >
+                            <Previewform FormName= {this.state.previewFormName}  User={user} OnGreet={this.onGreet} >
                             Hello Preview!
                             </Previewform>
                         </ErrorBoundary>
