@@ -4,6 +4,8 @@ import { Footer } from "../components/Footer";
 import { Dataform } from "../components/Dataform";
 import { Previewform  } from "../components/Previewform";
 import { ErrorBoundary } from "../components/ErrorBoundary";
+import Styles from "../components/Style.scss";
+import CssStyles from "../components/CssStyle.css";
 
 export class Home extends React.Component{
 
@@ -80,9 +82,9 @@ export class Home extends React.Component{
                 </div>
                 <div className="container-wrapper">
                     <ErrorBoundary>                       
-                        <code className="testCode">
+                        <p className="testCode" >
                             <button text="Un Mount" onClick={ () => this.onHomeMounted() } > UnmOunt </button>
-                        </code>
+                        </p>
                     </ErrorBoundary>
                 </div>     
             </div>
