@@ -14,7 +14,7 @@ export class Previewform extends React.Component{
                 Staus: 1
             });
             console.log(this.state);
-        },5000);
+        },500);
         console.log('constructor');        
     }
     onMakeOlder(){

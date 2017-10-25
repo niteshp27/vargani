@@ -15,13 +15,13 @@ class App extends React.Component{
             <Router>
                 <Root>   
                     <Switch>               
-                        <Route exact path="/" component={Home} >
+                        <Route exact path={"/"} component={Home} >
                          
                         </Route>
-                        <Route path="/home" component={Home} >
+                        <Route path={"/home"} component={Home} >
                      
                         </Route>
-                        <Route  path="/user" component={User}>                   
+                        <Route  path={"/user/:id"} component={User}>                   
                            
                         </Route>
                         <Route component={NoMatch}> 
