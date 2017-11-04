@@ -4,10 +4,27 @@ var path = require("path");
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
 
-const env = process.env.NODE_ENV
+const env = process.env.NODE_ENV;
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');   //implement later to clenan files
+const CleanWebpackPlugin = require('clean-webpack-plugin'); //implement later to clenan files
 
+// the path(s) that should be cleaned
+let pathsToClean = [
+    'dist',
+    'build'
+];
+  
+// the clean options to use
+let cleanOptions = {
+    root:     __dirname,
+    exclude:  [''],
+    verbose:  true,
+    dry:      false,
+    watch:    false
+};
+  
 const config = {
     entry: {
         index: SRC_DIR + "/app/index.js"
@@ -15,11 +32,39 @@ const config = {
     output: {
         path: DIST_DIR + "/app",
         filename: "bundle.js",
-        publicPath: "/app",
+        publicPath: "/app"
     },
+    plugins: env === 'production'
+    ? [
+        new ExtractTextPlugin({
+          filename: 'appstyles.css'
+        })
+      ]
+    : [
+       //new CleanWebpackPlugin(['dist/app']),
+       //new HtmlWebpackPlugin({template: 'dist/index.html'})
+    ],    
     devtool: 'source-map',   //builds sourcemap for files
-    module:{
-        loaders: [            
+    module:{             
+        loaders: [     
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name (file) {
+                            if (env === 'production') {
+                                return '[hash].[ext]'
+                            }                        
+                              return '[name].[ext]'
+                            },
+                            outputPath: '/images/',
+                            emitFile: true
+                        }
+                    }
+                ]        
+            },
             {
                 test: /\.css$/,
                 use: env === 'production'
@@ -73,7 +118,7 @@ const config = {
                  ]
             },
             {
-                test: /\.js?/,
+                test: /\.js?/,  //     /\.(js|jsx)$/,
                 include: SRC_DIR,
                 loader: "babel-loader",
                 query: {
@@ -85,14 +130,23 @@ const config = {
                     loader: "ts"                       
             },
             {
-                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                test: /\.(svg|eot|ttf|woff|woff2)$/,
                 include: SRC_DIR,
                 loader: 'url-loader',
                 options: {
-                  limit: 10000
+                  limit: 10000,
+                  outputPath: '/fonts/'
                 }
-            }         
+            },
+            {
+				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'file-loader',
+				query: {
+					name: '/fonts/[name].[hash:8].[ext]'
+				}
+			}        
         ]
+               
         // ,
         // rules:[
         //     {
@@ -121,13 +175,8 @@ const config = {
         //     }
         // ]
     },
-    plugins: env === 'production'
-    ? [
-        new ExtractTextPlugin({
-          filename: 'appstyles.css'
-        })
-      ]
-    : []
+
+    
 };
 
 module.exports = config;
