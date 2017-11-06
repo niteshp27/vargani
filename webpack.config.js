@@ -118,7 +118,7 @@ const config = {
                  ]
             },
             {
-                test: /\.js?/,  //     /\.(js|jsx)$/,
+                test: /\.js|jsx?/,  //     /\.(js|jsx)$/,
                 include: SRC_DIR,
                 loader: "babel-loader",
                 query: {
