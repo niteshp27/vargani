@@ -1,15 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch, NavLink } from "react-router-dom";
 //import * as Blueprint from "@blueprintjs/core";
-//import img from '../logo.png';
+//import img from './logo.png';
+import img from '../assets/logo.png';
 
 export const Header = (props) => {
-    console.log("Indside header.js");
+
+console.log("Indside header.js"+ img);
+console.log("Indside header 2"+ require('../assets/logo.png'));
+
     const menu = (
         <div className="pt-navbar">
             <nav className="container-wrapper modifier">
                 <div className="pt-navbar-group pt-align-left">
-                    {/* <img src={img} /> */}
+                
+                    <img src={img} />
                     <NavLink to={"/"} activeClassName="active" > Home</NavLink>                   
                         <span className="pt-navbar-divider"></span>
                     <NavLink to={"/user/niteshpatare"} activeClassName="active">user</NavLink>                    
