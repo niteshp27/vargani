@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorBoundary } from "../components/ErrorBoundary";
+import { ErrorBoundary } from "../components/ErrorBoundary.jsx";
 import PropTypes from 'prop-types';
 
 export class Previewform extends React.Component{

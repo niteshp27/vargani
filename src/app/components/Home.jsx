@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from 'react-dom';
-import { Footer } from "../components/Footer";
-import { Dataform } from "../components/Dataform";
-import { Previewform  } from "../components/Previewform";
-import { ErrorBoundary } from "../components/ErrorBoundary";
+import { Footer } from "../components/Footer.jsx";
+import { Dataform } from "../components/Dataform.jsx";
+import { Previewform  } from "../components/Previewform.jsx";
+import { ErrorBoundary } from "../components/ErrorBoundary.jsx";
 import Styles from "../components/Style.scss";
 import CssStyles from "../components/CssStyle.css";
 
