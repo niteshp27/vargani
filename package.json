@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run build",
     "copy": "cpx src/index.html dist",
-    "build": "webpack --progress --colors -d && npm run copy",
+    "build": "webpack --progress -d && npm run copy",
     "build:prod": "webpack  -p && npm run copy",
-    "dev-client": "npm run build && webpack -d && npm run copy && webpack-dev-server --port 3000 --content-base src/ --inline --hot"
+    "dev-client": "npm run build && webpack-dev-server --port 3000 --content-base src/ --inline --hot"
   },
   "keywords": [
     "reactjs"
