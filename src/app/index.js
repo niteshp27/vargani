@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Root } from "./components/Root";
-import { Home } from "./components/Home";
-import { User } from "./components/User";
-import { NoMatch } from "./components/NoMatch";
+import { Root } from "./components/Root.jsx";
+import { Home } from "./components/Home.jsx";
+import { User } from "./components/User.jsx";
+import { NoMatch } from "./components/NoMatch.jsx";
 
 class App extends React.Component{
 
