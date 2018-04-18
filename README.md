@@ -1,2 +1,2 @@
-# vargani
-A Vargani App
+# Basic React Learnings
+A Basic React Learnings Hands On
